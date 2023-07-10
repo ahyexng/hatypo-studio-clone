@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import GlobalStyle from "./styles/GlobalStyle";
-import Sidebar from "./components/Sidebar";
+import Main from "./pages/Main";
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Sidebar />
+      <Main />
     </div>
   );
 }
