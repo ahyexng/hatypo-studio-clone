@@ -1,12 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
 import GlobalStyle from "./styles/GlobalStyle";
 import Sidebar from "./components/Sidebar";
+import Main from "./pages/Main";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Sidebar />
+      <BrowserRouter>
+        <Sidebar />
+        <Routes>
+          <Route path={"/content"} element={<Main />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import { HiOutlineFolderRemove } from "react-icons/hi";
 import { FiSettings } from "react-icons/fi";
 import Activity from "../assets/activity.svg";
 import Memoticon from "../assets/profile.png";
+import { Switch, Route, NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <>
@@ -26,7 +27,10 @@ const Sidebar = () => {
             <IoCallOutline size="25" />
           </NavList>
           <NavList>
-            <MdOutlineGroups size="25" />
+            <NavLink to="/content" activeClassName="active">
+              {" "}
+              <MdOutlineGroups size="25" />
+            </NavLink>
           </NavList>
           <NavList>
             <CiGrid41 size="25" />
@@ -60,10 +64,21 @@ const Menu = styled.div`
 
 const Nav = styled.div``;
 const NavList = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 25px;
   opacity: 0.5;
+  height: 37px;
+  width: 40px;
+  border-radius: 10px;
   img {
     height: 25px;
+  }
+  a {
+    a.active {
+      background-color: blue;
+    }
   }
 `;
 const NavLast = styled.div`
