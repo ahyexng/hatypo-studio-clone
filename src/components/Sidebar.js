@@ -1,46 +1,38 @@
 import { styled } from "styled-components";
-import { FcInfo } from "react-icons/fc";
-import { IoCallOutline } from "react-icons/io5";
-import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
-import { MdOutlineGroups } from "react-icons/md";
-import { CiGrid41 } from "react-icons/ci";
-import { HiOutlineFolderRemove } from "react-icons/hi";
-import { FiSettings } from "react-icons/fi";
-import Activity from "../assets/activity.svg";
+import Activity from "../assets/activity.png";
 import Memoticon from "../assets/profile.png";
+import Clogo from "../assets/clogo.png";
+import Bubble from "../assets/bubble.png";
+import Call from "../assets/call.png";
+import File from "../assets/file.png";
+import Grid from "../assets/grid.png";
+import Group from "../assets/group.png";
+import Setting from "../assets/setting.png";
 import { Switch, Route, NavLink } from "react-router-dom";
+import { useState } from "react";
+
 const Sidebar = () => {
+  const [navStyle, setNavStyle] = useState(0);
+  const handleNavStyle = (id) => {
+    setNavStyle(id);
+  };
   return (
     <>
       <Menu>
         <Nav>
-          <NavList style={{ marginTop: "35px", opacity: 1 }}>
-            <FcInfo size="30" />
-          </NavList>
-          <NavList>
-            <img src={Activity} alt="activity-icon" />
-          </NavList>
-          <NavList>
-            <IoChatbubbleEllipsesOutline size="25" />
-          </NavList>
-          <NavList>
-            <IoCallOutline size="25" />
-          </NavList>
-          <NavList>
-            <NavLink to="/content" activeClassName="active">
-              {" "}
-              <MdOutlineGroups size="25" />
-            </NavLink>
-          </NavList>
-          <NavList>
-            <CiGrid41 size="25" />
-          </NavList>
-          <NavList>
-            <HiOutlineFolderRemove size="25" />
-          </NavList>
-          <NavList>
-            <FiSettings size="25" />
-          </NavList>
+          {NAV_ITEMS.map(({ id, iconName, path }) => {
+            return (
+              <NavList
+                key={id}
+                onClick={() => handleNavStyle(id)}
+                changeNavStyle={navStyle === id}
+              >
+                <NavLink to={`${path}`}>
+                  <img src={iconName} />
+                </NavLink>
+              </NavList>
+            );
+          })}
         </Nav>
         <NavLast>
           <img src={Memoticon} alt="profile-icon" />
@@ -50,8 +42,51 @@ const Sidebar = () => {
   );
 };
 
+const NAV_ITEMS = [
+  {
+    id: 1,
+    iconName: Clogo,
+    path: "/",
+  },
+  {
+    id: 2,
+    iconName: Activity,
+    path: "/2",
+  },
+  {
+    id: 3,
+    iconName: Bubble,
+    path: "/main",
+  },
+  {
+    id: 4,
+    iconName: Call,
+    path: "/4",
+  },
+  {
+    id: 5,
+    iconName: Group,
+    path: "/5",
+  },
+  {
+    id: 6,
+    iconName: Grid,
+    path: "/6",
+  },
+  {
+    id: 7,
+    iconName: File,
+    path: "/7",
+  },
+  {
+    id: 8,
+    iconName: Setting,
+    path: "/8",
+  },
+];
+
 const Menu = styled.div`
-  background-color: pink;
+  background-color: #faf4c0;
   margin: 40px 500px;
   height: 1000px;
   width: 100px;
@@ -62,23 +97,20 @@ const Menu = styled.div`
   border-radius: 10px;
 `;
 
-const Nav = styled.div``;
-const NavList = styled.div`
+const Nav = styled.ul``;
+const NavList = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 25px;
-  opacity: 0.5;
-  height: 37px;
-  width: 40px;
+  color: gray;
+  background-color: ${(props) => (props.changeNavStyle ? "#FFB2D9" : "")};
   border-radius: 10px;
+  height: 45px;
+  width: 45px;
   img {
     height: 25px;
-  }
-  a {
-    a.active {
-      background-color: blue;
-    }
+    width: 25px;
   }
 `;
 const NavLast = styled.div`
@@ -89,4 +121,5 @@ const NavLast = styled.div`
   }
   margin-bottom: 30px;
 `;
+
 export default Sidebar;
