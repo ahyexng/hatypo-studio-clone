@@ -19,7 +19,7 @@ const Sidebar = () => {
   return (
     <>
       <Menu>
-        <Nav>
+        <ul>
           {NAV_ITEMS.map(({ id, iconName, path }) => {
             return (
               <NavList
@@ -33,7 +33,7 @@ const Sidebar = () => {
               </NavList>
             );
           })}
-        </Nav>
+        </ul>
         <NavLast>
           <img src={Memoticon} alt="profile-icon" />
         </NavLast>
@@ -86,7 +86,6 @@ const NAV_ITEMS = [
 ];
 
 const Menu = styled.div`
-  background-color: #faf4c0;
   margin: 20px 20px;
   height: 780px;
   width: 90px;
@@ -97,7 +96,6 @@ const Menu = styled.div`
   border-radius: 10px;
 `;
 
-const Nav = styled.ul``;
 const NavList = styled.li`
   display: flex;
   justify-content: center;
