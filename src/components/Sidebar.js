@@ -1,13 +1,13 @@
 import { styled } from "styled-components";
-import Activity from "../assets/activity.png";
-import Memoticon from "../assets/profile.png";
-import Clogo from "../assets/clogo.png";
-import Bubble from "../assets/bubble.png";
-import Call from "../assets/call.png";
-import File from "../assets/file.png";
-import Grid from "../assets/grid.png";
-import Group from "../assets/group.png";
-import Setting from "../assets/setting.png";
+import Activity from "../assets/icons/activity.png";
+import Memoticon from "../assets/icons/profile.png";
+import Clogo from "../assets/icons/clogo.png";
+import Bubble from "../assets/icons/bubble.png";
+import Call from "../assets/icons/call.png";
+import File from "../assets/icons/file.png";
+import Grid from "../assets/icons/grid.png";
+import Group from "../assets/icons/group.png";
+import Setting from "../assets/icons/setting.png";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 

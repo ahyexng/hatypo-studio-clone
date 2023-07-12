@@ -1,0 +1,78 @@
+{
+    "PinnedMsg": [
+      {
+        "id": "1",
+        "profile": "../images/olaf.png",
+        "name": "Olaf",
+        "content": "Hi, I'm Olaf, and I like warm hugs!",
+        "isPinned": true,
+        "time": "09:26 PM"
+      },
+      {
+        "id": "2",
+        "profile": "../images/kuromi.png",
+        "name": "Kuromi",
+        "content": "Hi, I'm Kuromi",
+        "isPinned": true,
+        "time": "09:11 PM"
+      },
+      {
+        "id": "3",
+        "profile": "../images/pikachu.png",
+        "name": "Pikachu",
+        "content": "pikapika~~chu~~~~~~",
+        "isPinned": true,
+        "time": "09:12 PM"
+      },
+      {
+        "id": "4",
+        "profile": "../images/jerry.png",
+        "name": "Jerry",
+        "content": "It's a secret from Tom!",
+        "isPinned": true,
+        "time": "09:11 PM"
+      }
+    ],
+    "AllMsg": [
+        {
+          "id": "1",
+          "profile": "../images/Spongebob.png",
+          "name": "Spongebob",
+          "content": "Nahahahahahaha",
+          "isPinned": false,
+          "time": "09:26 PM"
+        },
+        {
+          "id": "2",
+          "profile": "../images/tom.png",
+          "name": "Tom",
+          "content": "Where's Jerry?",
+          "isPinned": false,
+          "time": "09:25 PM"
+        },
+        {
+          "id": "3",
+          "profile": "../images/anpanman.png",
+          "name": "Anpanman",
+          "content": "My face is so wet that I can't get energy...",
+          "isPinned": false,       
+           "time": "09:21 PM"
+        },
+        {
+          "id": "4",
+          "profile":  "../images/kirby.png",
+          "name": "Kirby",
+          "content": "I'm going to eat it all!",
+          "isPinned": false,
+          "time": "Yesterday"
+        },
+        {
+          "id": "5",
+          "profile":  "../images/panda.png",
+          "name": "Panda",
+          "content": "Fubao is cute",
+          "isPinned": false,
+          "time": "Yesterday"
+        }
+      ]
+  }
