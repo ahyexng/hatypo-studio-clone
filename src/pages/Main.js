@@ -1,9 +1,12 @@
 import { styled } from "styled-components";
+import Sidebar from "../components/Sidebar";
 import MessageList from "../components/MessageList";
 const Main = () => {
   return (
     <>
       <MainWrap>
+        <Sidebar />
+
         <MessageList />
       </MainWrap>
     </>
