@@ -18,26 +18,28 @@ const Sidebar = () => {
   };
   return (
     <>
-      <Menu>
-        <ul>
-          {NAV_ITEMS.map(({ id, iconName, path }) => {
-            return (
-              <NavList
-                key={id}
-                onClick={() => handleNavStyle(id)}
-                changeNavStyle={navStyle === id}
-              >
-                <NavLink to={`${path}`}>
-                  <img src={iconName} />
-                </NavLink>
-              </NavList>
-            );
-          })}
-        </ul>
-        <NavLast>
-          <img src={Memoticon} alt="profile-icon" />
-        </NavLast>
-      </Menu>
+      <SidebarWrap>
+        <Side>
+          <ul>
+            {NAV_ITEMS.map(({ id, iconName, path }) => {
+              return (
+                <NavList
+                  key={id}
+                  onClick={() => handleNavStyle(id)}
+                  changeNavStyle={navStyle === id}
+                >
+                  <NavLink to={`${path}`}>
+                    <img src={iconName} />
+                  </NavLink>
+                </NavList>
+              );
+            })}
+          </ul>
+          <NavLast>
+            <img src={Memoticon} alt="profile-icon" />
+          </NavLast>
+        </Side>
+      </SidebarWrap>
     </>
   );
 };
@@ -85,17 +87,21 @@ const NAV_ITEMS = [
   },
 ];
 
-const Menu = styled.div`
-  margin: 20px 20px;
+const SidebarWrap = styled.div`
+  padding: 20px;
+  height: 780px;
+  width: 90px;
+`;
+const Side = styled.div`
   height: 780px;
   width: 90px;
   display: flex;
+  background-color: white;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
 `;
-
 const NavList = styled.li`
   display: flex;
   justify-content: center;

@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <BrowserRouter>
-        <Sidebar />
         <Routes>
           <Route path={"/"} element={<Main />} />
         </Routes>
