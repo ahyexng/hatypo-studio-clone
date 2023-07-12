@@ -1,9 +1,12 @@
 import { styled } from "styled-components";
+import Sidebar from "../components/Sidebar";
 
 const Main = () => {
   return (
     <>
-      <MainWrap></MainWrap>
+      <MainWrap>
+        <Sidebar />
+      </MainWrap>
     </>
   );
 };
