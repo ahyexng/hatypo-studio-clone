@@ -1,0 +1,62 @@
+{
+    "PinnedMsg": [
+      {
+        "id": "1",
+        "profile": "olaf.png",
+        "name": "Olaf",
+        "content": "Mas Aditt Typing....",
+        "isPinned": true
+      },
+      {
+        "id": "2",
+        "profile": "kuromi.png",
+        "name": "Kuromi",
+        "content": "Mas Aditt Typing....",
+        "isPinned": true
+      },
+      {
+        "id": "3",
+        "profile": "pikacue.png",
+        "name": "Pikachu",
+        "content": "ppppppppppppppppppp",
+        "isPinned": true
+      },
+      {
+        "id": "4",
+        "profile": "jerry.png",
+        "name": "Jerry",
+        "content": "Mas Aditt Typing....",
+        "isPinned": true
+      }
+    ],
+    "AllMsg": [
+        {
+          "id": "1",
+          "profile": "Olaf",
+          "name": "Olaf",
+          "content": "Mas Aditt Typing....",
+          "isPinned": false
+        },
+        {
+          "id": "2",
+          "profile": "Kuromi",
+          "name": "Kuromi",
+          "content": "Mas Aditt Typing....",
+          "isPinned": false
+        },
+        {
+          "id": "3",
+          "profile": "Pikachu",
+          "name": "Pikachu",
+          "content": "ppppppppppppppppppp",
+          "isPinned": false
+        },
+        {
+          "id": "4",
+          "profile": "Jerry",
+          "name": "Jerry",
+          "content": "Mas Aditt Typing....",
+          "isPinned": false
+        }
+      ]
+  }
