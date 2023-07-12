@@ -8,7 +8,7 @@ import File from "../assets/file.png";
 import Grid from "../assets/grid.png";
 import Group from "../assets/group.png";
 import Setting from "../assets/setting.png";
-import { Switch, Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Sidebar = () => {

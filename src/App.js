@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Sidebar />
         <Routes>
-          <Route path={"/content"} element={<Main />} />
+          <Route path={"/"} element={<Main />} />
         </Routes>
       </BrowserRouter>
     </div>

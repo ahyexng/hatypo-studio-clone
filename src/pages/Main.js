@@ -12,7 +12,7 @@ const Main = () => {
 };
 
 const MainWrap = styled.div`
-  background-color: pink;
+  background-color: #f8f7fd;
   width: 1440px;
   height: 900px;
 `;
