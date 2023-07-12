@@ -120,7 +120,7 @@ const NavList = styled.li`
 const NavLast = styled.div`
   img {
     height: 40px;
-    background-color: white;
+    background-color: pink;
     border-radius: 25px;
   }
   margin-bottom: 30px;
