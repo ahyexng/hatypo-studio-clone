@@ -46,7 +46,7 @@ const NAV_ITEMS = [
   {
     id: 1,
     iconName: Clogo,
-    path: "/",
+    path: "/1",
   },
   {
     id: 2,
@@ -87,9 +87,9 @@ const NAV_ITEMS = [
 
 const Menu = styled.div`
   background-color: #faf4c0;
-  margin: 40px 500px;
-  height: 1000px;
-  width: 100px;
+  margin: 20px 20px;
+  height: 780px;
+  width: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,15 +102,15 @@ const NavList = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 25px;
+  margin: 10px;
   color: gray;
   background-color: ${(props) => (props.changeNavStyle ? "#FFB2D9" : "")};
   border-radius: 10px;
   height: 45px;
   width: 45px;
   img {
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
   }
 `;
 const NavLast = styled.div`
