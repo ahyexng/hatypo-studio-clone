@@ -2,61 +2,77 @@
     "PinnedMsg": [
       {
         "id": "1",
-        "profile": "olaf.png",
+        "profile": "../images/olaf.png",
         "name": "Olaf",
-        "content": "Mas Aditt Typing....",
-        "isPinned": true
+        "content": "Hi, I'm Olaf, and I like warm hugs!",
+        "isPinned": true,
+        "time": "09:26 PM"
       },
       {
         "id": "2",
-        "profile": "kuromi.png",
+        "profile": "../images/kuromi.png",
         "name": "Kuromi",
-        "content": "Mas Aditt Typing....",
-        "isPinned": true
+        "content": "Hi, I'm Kuromi",
+        "isPinned": true,
+        "time": "09:11 PM"
       },
       {
         "id": "3",
-        "profile": "pikacue.png",
+        "profile": "../images/pikachu.png",
         "name": "Pikachu",
-        "content": "ppppppppppppppppppp",
-        "isPinned": true
+        "content": "pikapika~~chu~~~~~~",
+        "isPinned": true,
+        "time": "09:12 PM"
       },
       {
         "id": "4",
-        "profile": "jerry.png",
+        "profile": "../images/jerry.png",
         "name": "Jerry",
-        "content": "Mas Aditt Typing....",
-        "isPinned": true
+        "content": "It's a secret from Tom!",
+        "isPinned": true,
+        "time": "09:11 PM"
       }
     ],
     "AllMsg": [
         {
           "id": "1",
-          "profile": "Olaf",
-          "name": "Olaf",
-          "content": "Mas Aditt Typing....",
-          "isPinned": false
+          "profile": "../images/Spongebob.png",
+          "name": "Spongebob",
+          "content": "Nahahahahahaha",
+          "isPinned": false,
+          "time": "09:26 PM"
         },
         {
           "id": "2",
-          "profile": "Kuromi",
-          "name": "Kuromi",
-          "content": "Mas Aditt Typing....",
-          "isPinned": false
+          "profile": "../images/tom.png",
+          "name": "Tom",
+          "content": "Where's Jerry?",
+          "isPinned": false,
+          "time": "09:25 PM"
         },
         {
           "id": "3",
-          "profile": "Pikachu",
-          "name": "Pikachu",
-          "content": "ppppppppppppppppppp",
-          "isPinned": false
+          "profile": "../images/anpanman.png",
+          "name": "Anpanman",
+          "content": "My face is so wet that I can't get energy...",
+          "isPinned": false,       
+           "time": "09:21 PM"
         },
         {
           "id": "4",
-          "profile": "Jerry",
-          "name": "Jerry",
-          "content": "Mas Aditt Typing....",
-          "isPinned": false
+          "profile":  "../images/kirby.png",
+          "name": "Kirby",
+          "content": "I'm going to eat it all!",
+          "isPinned": false,
+          "time": "Yesterday"
+        },
+        {
+          "id": "5",
+          "profile":  "../images/panda.png",
+          "name": "Panda",
+          "content": "Fubao is cute",
+          "isPinned": false,
+          "time": "Yesterday"
         }
       ]
   }

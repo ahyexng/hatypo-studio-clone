@@ -1,15 +1,17 @@
 import { styled } from "styled-components";
-import Post from "../assets/post.png";
-import Search from "../assets/search.png";
-import Pinned from "../assets/pinned.png";
+import Post from "../assets/icons/post.png";
+import Search from "../assets/icons/search.png";
+import Pinned from "../assets/icons/pinned.png";
+import AllMsg from "../assets/icons/allMsg.png";
 import { useState } from "react";
 import dummy from "../assets/data/msgListData.json";
-// import Olaf from "../assets/olaf.png";
-// import Kuromi from "../assets/kuromi.png";
-// import Jerry from "../assets/jerry.png";
-// import Pikachu from "../assets/pikachu.png";
+import { Link } from "react-router-dom";
+
 const MessageList = () => {
   const [text, setText] = useState("");
+  const ChangeInput = (e) => {
+    setText(e.target.value);
+  };
   return (
     <>
       <MsgListWrap>
@@ -22,24 +24,47 @@ const MessageList = () => {
         <MsgSearch>
           <MsgSearchForm>
             <img src={Search} alt="msgListSearchIcon" />
-            <MsgInput value={text} placeholder="Search..."></MsgInput>
+            <MsgInput
+              value={text}
+              placeholder="Search..."
+              onChange={ChangeInput}
+            ></MsgInput>
           </MsgSearchForm>
         </MsgSearch>
         <PinnedMsg>
-          <PinnedP>
+          <MsgKind>
             <img src={Pinned} alt="msgListPinnedIcon" /> Pinned Message
-          </PinnedP>
-          {dummy.PinnedMsg.map((item, index) => {
+          </MsgKind>
+          {dummy.PinnedMsg.map((item) => {
             return (
-              <PinnedMsgBox>
-                {/* <img src={`src/assets/${item.profile}`} /> */}
-                <MsgName>{item.name}</MsgName>
-                <MsgContent>{item.content}</MsgContent>
-              </PinnedMsgBox>
+              // <Link to={`${item.name}`}>
+              <Link to="">
+                <MsgBox>
+                  <img src={item.profile} />
+                  <MsgTime>{item.time}</MsgTime>
+                  <MsgName>{item.name}</MsgName>
+                  <MsgContent>{item.content}</MsgContent>
+                </MsgBox>
+              </Link>
             );
           })}
         </PinnedMsg>
-        <AllMsg></AllMsg>
+        <MsgKind>
+          <img src={AllMsg} alt="msgListAllMsg" /> All Message
+        </MsgKind>
+        {dummy.AllMsg.map((item) => {
+          return (
+            // <Link to={`${item.name}`}>
+            <Link to="/">
+              <MsgBox>
+                <img src={item.profile} />
+                <MsgTime>{item.time}</MsgTime>
+                <MsgName>{item.name}</MsgName>
+                <MsgContent>{item.content}</MsgContent>
+              </MsgBox>
+            </Link>
+          );
+        })}
       </MsgListWrap>
     </>
   );
@@ -110,39 +135,49 @@ const PinnedMsg = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const PinnedP = styled.p`
+const MsgKind = styled.p`
   font-size: 13px;
   color: gray;
   width: 110px;
-  margin-bottom: 4px;
+
+  display: flex;
+  margin: 10px 0 15px 0;
   img {
     height: 12px;
     width: 12px;
     opacity: 0.5;
-    margin-right: 4px;
+    margin-right: 5px;
   }
 `;
-const PinnedMsgBox = styled.div`
+const MsgBox = styled.div`
   height: 50px;
   text-align: left;
+  margin-bottom: 10px;
   img {
     border-radius: 25px;
-    height: 36px;
-    width: 36px;
-    margin: 7px;
+    height: 45px;
+    width: 45px;
     float: left;
+    padding: 5px;
+    background-color: #ffd9ec;
   }
 `;
 const MsgName = styled.h1`
   font-weight: 800;
   width: 180px;
-  padding: 9px 0 6px 55px;
+  padding: 9px 0 6px 60px;
 `;
 const MsgContent = styled.p`
   width: 400px;
   font-size: 12px;
-  padding-left: 55px;
+  padding-left: 60px;
   color: green;
 `;
-const AllMsg = styled.div``;
+const MsgTime = styled.p`
+  float: right;
+  padding-top: 7px;
+  font-size: 12px;
+  color: gray;
+`;
+
 export default MessageList;
