@@ -1,9 +1,11 @@
 import { styled } from "styled-components";
-
+import MessageList from "../components/MessageList";
 const Main = () => {
   return (
     <>
-      <MainWrap></MainWrap>
+      <MainWrap>
+        <MessageList />
+      </MainWrap>
     </>
   );
 };
