@@ -1,12 +1,14 @@
 import { styled } from "styled-components";
 import Sidebar from "../components/Sidebar";
 import MessageList from "../components/MessageList";
+import Content from "../components/Content";
 const Main = () => {
   return (
     <>
       <MainWrap>
         <Sidebar />
         <MessageList />
+        <Content />
       </MainWrap>
     </>
   );
