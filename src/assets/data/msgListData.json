@@ -74,5 +74,48 @@
           "isPinned": false,
           "time": "Yesterday"
         }
+      ],
+      "Content": [
+        {
+          "id": "1",
+          "profile": "../images/kuromi.png",
+          "name": "Kuromi",
+          "content": ["안뇽 나는 쿠로밍",{"Link": "@You"}],
+          "time": "05:00 PM",
+          "isMine": false
+        },
+        {
+          "id": "2",
+          "profile": "../images/kuromi.png",
+          "name": "You",
+          "content": ["귀여웡"],
+          "time": "05:02 PM",
+          "isMine": true
+        },
+        {
+          "id": "2",
+          "profile": "../images/tom.png",
+          "name": "Tom",
+          "content": [{"img": "../images/tom.png"},"내 프사 오때?"],
+          "time": "09:20 AM",
+          "isMine": false
+        },
+        {
+          "id": "3",
+          "profile": "../images/kirby.png",
+          "name": "Kirby",
+          "content": ["별로"],
+          "time": "09:21 AM",
+          "isMine": false
+        },
+        {
+          "id": "4",
+          "profile": "../images/panda.png",
+          "name": "Panda",
+          "content": ["얘들아 이것봐 아이바오가 쌍둥이 낳았대",{"Link": "https://www.instagram.com/p/Cq2AzG..."} ],
+      
+          "time": "05:00 PM",
+          "isMine": false
+        }
       ]
   }
