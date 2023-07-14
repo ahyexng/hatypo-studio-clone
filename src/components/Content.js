@@ -36,11 +36,11 @@ const Content = () => {
           </HeaderMsg>
           <HeaderImgWrap>
             <HeaderImg src={Kuromi} />
-            <HeaderImg src={Pikachu} style={{ left: "37px" }} />
-            <HeaderImg src={Kirby} style={{ left: "54px" }} />
+            <HeaderImg src={Pikachu} style={{ left: "150px" }} />
+            <HeaderImg src={Kirby} style={{ left: "165px" }} />
             <HeaderImg
               src={Seven}
-              style={{ left: "71px", padding: "7px 10px 7px 10px" }}
+              style={{ left: "180px", padding: "7px 10px 7px 10px" }}
             />
           </HeaderImgWrap>
           <HeaderIconWrap>
@@ -161,7 +161,7 @@ const HeaderImg = styled.img`
   border: 1px solid white;
   border-radius: 25px;
   top: -16px;
-  left: 20px;
+  left: 140px;
   height: 30px;
   width: 30px;
   padding: 5px;
