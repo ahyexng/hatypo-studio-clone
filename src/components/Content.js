@@ -119,7 +119,7 @@ const Content = () => {
 
 const ContentWrap = styled.div`
   background-color: white;
-  width: 580px;
+  width: 600px;
   height: 780px;
   margin-top: 20px;
   border-radius: 10px;
@@ -200,7 +200,7 @@ const DateView = styled.div`
 `;
 const ContentView = styled.div`
   display: flex;
-  width: 460px;
+  width: 480px;
 
   flex-direction: column;
 `;
@@ -259,9 +259,9 @@ const MsgHeader = styled.div`
   margin-right: 10px;
 `;
 const MyMsg = styled.div`
-  width: 460px;
   display: flex;
   flex-direction: column;
+  width: 550px;
 `;
 const MyMsgTime = styled.p`
   font-size: 13px;
@@ -309,7 +309,7 @@ const ContentForm = styled.form`
 const ContentInput = styled.input`
   border: none;
   height: 50px;
-  width: 400px;
+  width: 500px;
   background-color: #f8f7fd;
   &::placeholder {
     color: #bdbdbd;
@@ -321,7 +321,7 @@ const FormWrap = styled.div`
   display: flex;
   align-items: center;
   height: 60px;
-  width: 390px;
+  width: 490px;
   padding: 18px;
 `;
 const InputIcon = styled.img`

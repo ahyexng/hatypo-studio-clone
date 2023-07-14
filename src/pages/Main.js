@@ -17,7 +17,7 @@ const Main = () => {
 };
 
 const MainWrap = styled.div`
-  width: 1300px;
+  width: 1450px;
   height: 900px;
   display: flex;
   background-color: #f8f7fd;

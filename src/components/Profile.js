@@ -10,7 +10,7 @@ const Profile = () => {
 
 const ProfileWrap = styled.div`
   background-color: purple;
-  width: 300px;
+  width: 350px;
   height: 780px;
   margin: 20px 10px 0 10px;
   border-radius: 10px;
