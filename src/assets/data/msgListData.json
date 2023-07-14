@@ -117,5 +117,62 @@
           "time": "05:00 PM",
           "isMine": false
         }
+      ],
+      "ProfileList": [{
+        "Members": [
+        {
+          "id": "1",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Add Member"
+        },
+        {
+          "id": "2",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        },
+        {
+          "id": "3",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        },
+        {
+          "id": "4",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        },
+        {
+          "id": "5",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        },
+        {
+          "id": "6",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        }
+      ],
+      "Attachments": [{
+        
+          "id": "1",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Add Member"
+        },
+        {
+          "id": "2",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        },
+        {
+          "id": "3",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        },
+        {
+          "id": "4",
+          "MemberImg": "../imges/kuromi.png",
+          "MemberName": "Kuromi"
+        }
       ]
-  }
+    }]    
+}
+  
