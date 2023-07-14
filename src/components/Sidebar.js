@@ -48,42 +48,42 @@ const NAV_ITEMS = [
   {
     id: 1,
     iconName: Clogo,
-    path: "/1",
+    path: "/",
   },
   {
     id: 2,
     iconName: Activity,
-    path: "/2",
+    path: "/",
   },
   {
     id: 3,
     iconName: Bubble,
-    path: "/main",
+    path: "/",
   },
   {
     id: 4,
     iconName: Call,
-    path: "/4",
+    path: "/",
   },
   {
     id: 5,
     iconName: Group,
-    path: "/5",
+    path: "/",
   },
   {
     id: 6,
     iconName: Grid,
-    path: "/6",
+    path: "/",
   },
   {
     id: 7,
     iconName: File,
-    path: "/7",
+    path: "/",
   },
   {
     id: 8,
     iconName: Setting,
-    path: "/8",
+    path: "/",
   },
 ];
 
