@@ -119,7 +119,7 @@ const Content = () => {
 
 const ContentWrap = styled.div`
   background-color: white;
-  width: 500px;
+  width: 580px;
   height: 780px;
   margin-top: 20px;
   border-radius: 10px;
