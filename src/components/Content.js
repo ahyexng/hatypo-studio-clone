@@ -7,6 +7,7 @@ import Seven from "../assets/images/seven.png";
 import Face from "../assets/icons/face.png";
 import More from "../assets/icons/more.png";
 import Call from "../assets/icons/call.png";
+import Send from "../assets/icons/send.png";
 import dummy from "../assets/data/msgListData.json";
 const Content = () => {
   const monthNames = [
@@ -107,7 +108,9 @@ const Content = () => {
             <InputIcon src={Call} />
             <InputIcon src={More} />
           </FormWrap>
-          <ContentBtn>btn</ContentBtn>
+          <ContentBtn>
+            <img src={Send} alt="sendIcon" />
+          </ContentBtn>
         </ContentForm>
       </ContentWrap>
     </>
@@ -328,11 +331,16 @@ const InputIcon = styled.img`
   opacity: 0.5;
 `;
 const ContentBtn = styled.button`
-  background-color: skyblue;
+  background-color: pink;
   height: 60px;
   width: 60px;
   margin-left: 10px;
   border-radius: 10px;
+  padding-top: 5px;
+  img {
+    height: 30px;
+    width: 30px;
+  }
 `;
 
 export default Content;
