@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import Clogo from "../assets/icons/clogo.png";
-
+import ProfileList from "../components/ProfileList";
 const Profile = () => {
   return (
     <>
@@ -10,20 +10,7 @@ const Profile = () => {
           <h1>Ahyeong Studio</h1>
           <p>Create something New</p>
         </ProfileHeader>
-        <MemberWrap>
-          <MemberHeader>
-            <p>Members</p>
-            <img src={Clogo} />
-          </MemberHeader>
-          <MemberList>
-            <img src={Clogo} />
-            <p>Kuromi</p>
-          </MemberList>
-          <MemberList>
-            <img src={Clogo} />
-            <p>Kuromi</p>
-          </MemberList>
-        </MemberWrap>
+        <ProfileList />
       </ProfileWrap>
     </>
   );
@@ -36,6 +23,7 @@ const ProfileWrap = styled.div`
   margin: 20px 10px 0 20px;
   border-radius: 10px;
   padding: 25px;
+  overflow: scroll;
 `;
 const ProfileHeader = styled.div`
   display: flex;

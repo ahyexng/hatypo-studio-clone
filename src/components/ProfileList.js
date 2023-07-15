@@ -1,21 +1,37 @@
 import { styled } from "styled-components";
-
+import dummy from "../assets/data/msgListData.json";
+import Clogo from "../assets/icons/clogo.png";
+import ArrowDown from "../assets/icons/arrowDown.png";
 const ProfileList = () => {
   return (
     <>
       <MemberWrap>
         <MemberHeader>
-          <p>Members</p>
-          <img src={Clogo} />
+          <p>MemberList</p>
+          <img src={ArrowDown} />
         </MemberHeader>
-        <MemberList>
-          <img src={Clogo} />
-          <p>Kuromi</p>
-        </MemberList>
-        <MemberList>
-          <img src={Clogo} />
-          <p>Kuromi</p>
-        </MemberList>
+        {dummy.MemberList.map((item) => {
+          return (
+            <MemberList>
+              <img src={item.profile} />
+              <p>{item.name}</p>
+            </MemberList>
+          );
+        })}
+      </MemberWrap>
+      <MemberWrap>
+        <MemberHeader>
+          <p>AttachmentsList</p>
+          <img src={ArrowDown} />
+        </MemberHeader>
+        {dummy.AttachmentsList.map((item) => {
+          return (
+            <MemberList>
+              <img src={item.profile} />
+              <p>{item.name}</p>
+            </MemberList>
+          );
+        })}
       </MemberWrap>
     </>
   );
@@ -23,23 +39,14 @@ const ProfileList = () => {
 const MemberWrap = styled.div`
   display: flex;
   flex-direction: column;
-  img {
-    padding: 5px;
-    border-radius: 25px;
-    background-color: skyblue;
-    height: 40px;
-    width: 40px;
-  }
 `;
 const MemberHeader = styled.div`
-  /* background-color: pink; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 45px;
   margin-bottom: 10px;
   img {
-    background-color: skyblue;
     margin-right: 10px;
     height: 40px;
     width: 40px;
@@ -58,6 +65,11 @@ const MemberList = styled.div`
     font-weight: 600;
   }
   img {
+    padding: 7px;
+    border-radius: 25px;
+    background-color: pink;
+    height: 40px;
+    width: 40px;
   }
 `;
 export default ProfileList;
