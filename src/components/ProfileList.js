@@ -67,7 +67,7 @@ const MemberList = styled.div`
   img {
     padding: 7px;
     border-radius: 25px;
-    background-color: pink;
+    background-color: #ffd9ec;
     height: 40px;
     width: 40px;
   }
