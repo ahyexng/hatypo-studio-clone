@@ -72,7 +72,7 @@ const MessageList = () => {
 
 const MsgListWrap = styled.div`
   background-color: white;
-  width: 300px;
+  width: 350px;
   height: 780px;
   margin: 20px 10px 0 30px;
   border-radius: 10px;

@@ -93,7 +93,7 @@
           "isMine": true
         },
         {
-          "id": "2",
+          "id": "3",
           "profile": "../images/tom.png",
           "name": "Tom",
           "content": [{"img": "../images/tom.png"},"내 프사 오때?"],
@@ -101,7 +101,7 @@
           "isMine": false
         },
         {
-          "id": "3",
+          "id": "4",
           "profile": "../images/kirby.png",
           "name": "Kirby",
           "content": ["별로"],
@@ -109,7 +109,7 @@
           "isMine": false
         },
         {
-          "id": "4",
+          "id": "5",
           "profile": "../images/panda.png",
           "name": "Panda",
           "content": ["얘들아 이것봐 아이바오가 쌍둥이 낳았대",{"Link": "https://www.instagram.com/p/Cq2AzG..."} ],
@@ -117,5 +117,60 @@
           "time": "05:00 PM",
           "isMine": false
         }
-      ]
-  }
+      ],
+    "MemberList": [
+      {
+        "id": "1",
+        "profile": "../images/plus.png",
+        "name": "Add Member"
+      },
+      {
+        "id": "2",
+        "profile": "../images/kuromi.png",
+        "name": "Kuromi"
+      },
+      {
+        "id": "3",
+        "profile": "../images/tom.png",
+        "name": "Tom"
+      },
+      {
+        "id": "4",
+        "profile": "../images/kirby.png",
+        "name": "Kirby"
+      },
+      {
+        "id": "5",
+        "profile": "../images/panda.png",
+        "name": "Panda"
+      },
+      {
+        "id": "6",
+        "profile": "../images/pikachu.png",
+        "name": "Pikachu"
+      }
+    ],
+    "AttachmentsList": [
+      {
+        "id": "1",
+        "profile": "../images/document.png",
+        "name": "Document"
+      },
+      {
+        "id": "2",
+        "profile": "../images/photo.png",
+        "name": "Photo"
+      },
+      {
+        "id": "3",
+        "profile": "../images/play.png",
+        "name": "Videos"
+      },
+      {
+        "id": "4",
+        "profile": "../images/file.png",
+        "name": "Other Files"
+      }
+    ]
+}
+  
