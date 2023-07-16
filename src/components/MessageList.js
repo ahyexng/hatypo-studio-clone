@@ -37,7 +37,6 @@ const MessageList = () => {
           </MsgKind>
           {dummy.PinnedMsg.map((item) => {
             return (
-              // <Link to={`${item.name}`}>
               <Link to="">
                 <MsgBox>
                   <img src={item.profile} />
@@ -54,7 +53,6 @@ const MessageList = () => {
         </MsgKind>
         {dummy.AllMsg.map((item) => {
           return (
-            // <Link to={`${item.name}`}>
             <Link to="/">
               <MsgBox>
                 <img src={item.profile} />
