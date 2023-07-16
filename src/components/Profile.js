@@ -1,7 +1,10 @@
 import { styled } from "styled-components";
 import Clogo from "../assets/icons/clogo.png";
 import ProfileList from "../components/ProfileList";
+import { useRef } from "react";
+
 const Profile = () => {
+  const scrollRef = useRef();
   return (
     <>
       <ProfileWrap>
@@ -10,7 +13,7 @@ const Profile = () => {
           <h1>Ahyeong Studio</h1>
           <p>Create something New</p>
         </ProfileHeader>
-        <ProfileList />
+        <ProfileList ref={scrollRef} />
       </ProfileWrap>
     </>
   );
