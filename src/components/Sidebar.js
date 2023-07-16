@@ -89,11 +89,10 @@ const NAV_ITEMS = [
 
 const SidebarWrap = styled.div`
   padding: 20px;
-  height: 780px;
   width: 90px;
 `;
 const Side = styled.div`
-  height: 780px;
+  height: ${({ theme }) => theme.height};
   width: 90px;
   display: flex;
   background-color: white;
@@ -108,7 +107,8 @@ const NavList = styled.li`
   align-items: center;
   margin: 10px;
   color: gray;
-  background-color: ${(props) => (props.changeNavStyle ? "#FFB2D9" : "")};
+  background-color: ${({ changeNavStyle, theme }) =>
+    changeNavStyle ? theme.colors.PINK : ""};
   border-radius: 10px;
   height: 45px;
   width: 45px;
@@ -120,7 +120,7 @@ const NavList = styled.li`
 const NavLast = styled.div`
   img {
     height: 40px;
-    background-color: pink;
+    background-color: ${({ theme }) => theme.colors.PINK};
     border-radius: 25px;
   }
   margin-bottom: 30px;

@@ -126,7 +126,7 @@ const Content = () => {
 const ContentWrap = styled.div`
   background-color: white;
   width: 600px;
-  height: 780px;
+  height: ${({ theme }) => theme.height};
   margin-top: 20px;
   border-radius: 10px;
   padding: 20px;
@@ -140,7 +140,7 @@ const ContentHeader = styled.div`
 const HeaderProfile = styled.img`
   height: 40px;
   width: 40px;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border-radius: 25px;
   padding: 5px;
   margin-right: 20px;
@@ -152,7 +152,7 @@ const HeaderMsg = styled.div`
   }
   p {
     text-align: left;
-    color: green;
+    color: ${({ theme }) => theme.colors.GREEN};
     font-size: 14px;
   }
 `;
@@ -163,7 +163,7 @@ const HeaderImgWrap = styled.div`
 `;
 const HeaderImg = styled.img`
   position: absolute;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border: 1px solid white;
   border-radius: 25px;
   top: -16px;
@@ -184,7 +184,7 @@ const HeaderLastImg = styled.img`
   opacity: 0.5;
 `;
 const ContentBox = styled.div`
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
   height: 600px;
   border-radius: 10px;
   overflow: scroll;
@@ -207,7 +207,6 @@ const DateView = styled.div`
 const ContentView = styled.div`
   display: flex;
   width: 480px;
-
   flex-direction: column;
 `;
 const GroupMsg = styled.div`
@@ -220,7 +219,7 @@ const MsgProfile = styled.img`
   height: 40px;
   width: 40px;
   float: left;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border-radius: 25px;
   padding: 3px;
 `;
@@ -290,7 +289,7 @@ const MyProfile = styled.img`
   padding: 3px;
   float: right;
   margin: 10px 2px 5px 0;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
 `;
 const MyMsgBox = styled.div`
   margin: 0 44px 10px auto;
@@ -300,7 +299,7 @@ const MyMsgBoxP = styled.p`
   padding: 13px 10px 10px 10px;
   font-size: 15px;
   font-weight: 600;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -316,14 +315,14 @@ const ContentInput = styled.input`
   border: none;
   height: 50px;
   width: 500px;
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
   &::placeholder {
     color: #bdbdbd;
   }
 `;
 const FormWrap = styled.div`
   border-radius: 10px;
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
   display: flex;
   align-items: center;
   height: 60px;
@@ -337,7 +336,7 @@ const InputIcon = styled.img`
   opacity: 0.5;
 `;
 const ContentBtn = styled.button`
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   height: 60px;
   width: 60px;
   margin-left: 10px;

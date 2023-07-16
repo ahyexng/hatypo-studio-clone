@@ -73,7 +73,7 @@ const MessageList = () => {
 const MsgListWrap = styled.div`
   background-color: white;
   width: 350px;
-  height: 780px;
+  height: ${({ theme }) => theme.height};
   margin: 20px 10px 0 30px;
   border-radius: 10px;
   padding: 25px;
@@ -85,7 +85,7 @@ const MsgListHeader = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   h1 {
-    color: pink;
+    color: ${({ theme }) => theme.colors.PINK};
     font-weight: 900;
     font-size: 30px;
   }
@@ -97,7 +97,7 @@ const HeaderImg = styled.div`
   border-radius: 25px;
   height: 45px;
   width: 45px;
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
   img {
     height: 20px;
     width: 20px;
@@ -159,7 +159,7 @@ const MsgBox = styled.div`
     width: 45px;
     float: left;
     padding: 5px;
-    background-color: #ffd9ec;
+    background-color: ${({ theme }) => theme.colors.PINK};
   }
 `;
 const MsgName = styled.h1`
@@ -171,7 +171,7 @@ const MsgContent = styled.p`
   width: 400px;
   font-size: 12px;
   padding-left: 60px;
-  color: green;
+  color: ${({ theme }) => theme.colors.GREEN};
 `;
 const MsgTime = styled.p`
   float: right;

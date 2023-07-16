@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 import dummy from "../assets/data/msgListData.json";
-import Clogo from "../assets/icons/clogo.png";
 import ArrowDown from "../assets/icons/arrowDown.png";
 const ProfileList = () => {
   return (
@@ -67,7 +66,7 @@ const MemberList = styled.div`
   img {
     padding: 7px;
     border-radius: 25px;
-    background-color: #ffd9ec;
+    background-color: ${({ theme }) => theme.colors.PINK};
     height: 40px;
     width: 40px;
   }
