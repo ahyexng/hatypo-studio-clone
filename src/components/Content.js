@@ -9,6 +9,8 @@ import More from "../assets/icons/more.png";
 import Call from "../assets/icons/call.png";
 import Send from "../assets/icons/send.png";
 import dummy from "../assets/data/msgListData.json";
+import { useRef, useEffect } from "react";
+
 const Content = () => {
   const monthNames = [
     "Jan",
@@ -25,6 +27,10 @@ const Content = () => {
     "Dec",
   ];
   const date = new Date();
+  const scrollRef = useRef();
+  useEffect(() => {
+    scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  });
   return (
     <>
       <ContentWrap>
@@ -49,7 +55,7 @@ const Content = () => {
             <HeaderLastImg src={More} />
           </HeaderIconWrap>
         </ContentHeader>
-        <ContentBox>
+        <ContentBox ref={scrollRef}>
           <DateView>
             <p>{`Today, ${monthNames[date.getMonth()]} ${date.getDay()}`}</p>
           </DateView>
