@@ -5,13 +5,13 @@ import Pinned from "../assets/icons/pinned.png";
 import AllMsg from "../assets/icons/allMsg.png";
 import { useState } from "react";
 import dummy from "../assets/data/msgListData.json";
-import { Link } from "react-router-dom";
 
 const MessageList = () => {
   const [text, setText] = useState("");
   const ChangeInput = (e) => {
     setText(e.target.value);
   };
+
   return (
     <>
       <MsgListWrap>
@@ -35,33 +35,31 @@ const MessageList = () => {
           <MsgKind>
             <img src={Pinned} alt="msgListPinnedIcon" /> Pinned Message
           </MsgKind>
-          {dummy.PinnedMsg.map((item) => {
-            return (
-              <Link to="">
+          {dummy.Msg.map((item) => {
+            if (item.isPinned == true)
+              return (
                 <MsgBox>
                   <img src={item.profile} />
                   <MsgTime>{item.time}</MsgTime>
                   <MsgName>{item.name}</MsgName>
                   <MsgContent>{item.content}</MsgContent>
                 </MsgBox>
-              </Link>
-            );
+              );
           })}
         </PinnedMsg>
         <MsgKind>
           <img src={AllMsg} alt="msgListAllMsg" /> All Message
         </MsgKind>
-        {dummy.AllMsg.map((item) => {
-          return (
-            <Link to="/">
+        {dummy.Msg.map((item) => {
+          if (item.isPinned == false)
+            return (
               <MsgBox>
                 <img src={item.profile} />
                 <MsgTime>{item.time}</MsgTime>
                 <MsgName>{item.name}</MsgName>
                 <MsgContent>{item.content}</MsgContent>
               </MsgBox>
-            </Link>
-          );
+            );
         })}
       </MsgListWrap>
     </>
