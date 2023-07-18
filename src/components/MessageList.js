@@ -4,7 +4,7 @@ import Search from "../assets/icons/search.png";
 import Pinned from "../assets/icons/pinned.png";
 import AllMsg from "../assets/icons/allMsg.png";
 import { useState } from "react";
-import dummy from "../assets/data/msgListData.json";
+import MsgListView from "./MsgListView";
 
 const MessageList = () => {
   const [text, setText] = useState("");
@@ -31,36 +31,8 @@ const MessageList = () => {
             ></MsgInput>
           </MsgSearchForm>
         </MsgSearch>
-        <PinnedMsg>
-          <MsgKind>
-            <img src={Pinned} alt="msgListPinnedIcon" /> Pinned Message
-          </MsgKind>
-          {dummy.Msg.map((item) => {
-            if (item.isPinned == true)
-              return (
-                <MsgBox>
-                  <img src={item.profile} />
-                  <MsgTime>{item.time}</MsgTime>
-                  <MsgName>{item.name}</MsgName>
-                  <MsgContent>{item.content}</MsgContent>
-                </MsgBox>
-              );
-          })}
-        </PinnedMsg>
-        <MsgKind>
-          <img src={AllMsg} alt="msgListAllMsg" /> All Message
-        </MsgKind>
-        {dummy.Msg.map((item) => {
-          if (item.isPinned == false)
-            return (
-              <MsgBox>
-                <img src={item.profile} />
-                <MsgTime>{item.time}</MsgTime>
-                <MsgName>{item.name}</MsgName>
-                <MsgContent>{item.content}</MsgContent>
-              </MsgBox>
-            );
-        })}
+        <MsgListView isPinned={true} />
+        <MsgListView isPinned={false} />
       </MsgListWrap>
     </>
   );
