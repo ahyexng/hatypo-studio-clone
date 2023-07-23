@@ -1,8 +1,6 @@
 import { styled } from "styled-components";
 import Post from "../assets/icons/post.png";
 import Search from "../assets/icons/search.png";
-import Pinned from "../assets/icons/pinned.png";
-import AllMsg from "../assets/icons/allMsg.png";
 import { useState } from "react";
 import MsgListView from "./MsgListView";
 
@@ -98,54 +96,6 @@ const MsgInput = styled.input`
     color: #d5d5d5;
     font-size: 15px;
   }
-`;
-const PinnedMsg = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const MsgKind = styled.p`
-  font-size: 13px;
-  color: gray;
-  width: 110px;
-
-  display: flex;
-  margin: 10px 0 15px 0;
-  img {
-    height: 12px;
-    width: 12px;
-    opacity: 0.5;
-    margin-right: 5px;
-  }
-`;
-const MsgBox = styled.div`
-  height: 50px;
-  text-align: left;
-  margin-bottom: 10px;
-  img {
-    border-radius: 25px;
-    height: 45px;
-    width: 45px;
-    float: left;
-    padding: 5px;
-    background-color: ${({ theme }) => theme.colors.PINK};
-  }
-`;
-const MsgName = styled.h1`
-  font-weight: 800;
-  width: 180px;
-  padding: 9px 0 6px 60px;
-`;
-const MsgContent = styled.p`
-  width: 400px;
-  font-size: 12px;
-  padding-left: 60px;
-  color: ${({ theme }) => theme.colors.GREEN};
-`;
-const MsgTime = styled.p`
-  float: right;
-  padding-top: 7px;
-  font-size: 12px;
-  color: gray;
 `;
 
 export default MessageList;

@@ -53,10 +53,13 @@ const MsgName = styled.h1`
   padding: 9px 0 6px 60px;
 `;
 const MsgContent = styled.p`
-  width: 400px;
+  width: 300;
   font-size: 12px;
-  padding-left: 60px;
+  padding-left: 15px;
+  overflow: hidden;
+  white-space: nowrap;
   color: ${({ theme }) => theme.colors.GREEN};
+  text-overflow: ellipsis;
 `;
 const MsgTime = styled.p`
   float: right;
