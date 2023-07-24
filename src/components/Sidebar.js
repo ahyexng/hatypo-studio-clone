@@ -8,7 +8,7 @@ import File from "../assets/icons/file.png";
 import Grid from "../assets/icons/grid.png";
 import Group from "../assets/icons/group.png";
 import Setting from "../assets/icons/setting.png";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Sidebar = () => {
@@ -28,9 +28,9 @@ const Sidebar = () => {
                   onClick={() => handleNavStyle(id)}
                   changeNavStyle={navStyle === id}
                 >
-                  <NavLink to={`${path}`}>
+                  <Link to={`${path}`}>
                     <img src={iconName} />
-                  </NavLink>
+                  </Link>
                 </NavList>
               );
             })}
