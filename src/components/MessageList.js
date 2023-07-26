@@ -51,7 +51,7 @@ const MsgListHeader = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   h1 {
-    color: ${({ theme }) => theme.colors.PINK};
+    color: black;
     font-weight: 900;
     font-size: 30px;
   }
