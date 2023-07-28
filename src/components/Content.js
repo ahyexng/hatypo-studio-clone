@@ -69,14 +69,17 @@ const Content = () => {
                       <MyName>You</MyName>
                       <MyMsgTime>{item.time}</MyMsgTime>
                     </MsgHeader>
-                    {item.content &&
+                    {/* {item.content &&
                       item.content.map((data, index) => {
                         return (
                           <MyMsgBox>
-                            <MyMsgBoxP>{data}</MyMsgBoxP>
+                            <MyMsgBoxP>{data.}</MyMsgBoxP>
                           </MyMsgBox>
                         );
-                      })}
+                      })} */}
+                    <MyMsgBox>
+                      <MyMsgBoxP>{item.content.text}</MyMsgBoxP>
+                    </MyMsgBox>
                   </MyMsg>
                 ) : (
                   <GroupMsg>
@@ -85,22 +88,45 @@ const Content = () => {
                       <MsgName>{item.name}</MsgName>
                       <MsgTime>{item.time}</MsgTime>
                     </MsgHeader>
-                    {item.content &&
+                    <MsgBox>
+                      <MsgBoxP>
+                        {/* {item.content.hasLink ? (
+                                <a href="/">{item.content.Link}</a>
+                              ) : item.content.img ? (
+                                <img src={item.content.img} />
+                              ) : (
+                                data
+                              )} */}
+                        {item.content.hasLink && (
+                          <a href="/">{item.content.Link}</a>
+                        )}
+                        <br />
+                        {item.content.hasImage && (
+                          <img src={item.content.image} />
+                        )}
+                        {item.content.text}
+                        <br />
+                      </MsgBoxP>
+                    </MsgBox>
+                    {/* {item.content &&
                       item.content.map((data, index) => {
                         return (
                           <MsgBox>
                             <MsgBoxP>
-                              {data.Link ? (
+                              {data.hasLink ? (
                                 <a href="/">{data.Link}</a>
                               ) : data.img ? (
                                 <img src={data.img} />
                               ) : (
                                 data
                               )}
+                              {data.hasLink && <a href="/">{data.Link}</a>}
+                              {data.hasImage && <img src={data.img} />}
+                              {data.text}
                             </MsgBoxP>
                           </MsgBox>
                         );
-                      })}
+                      })} */}
                   </GroupMsg>
                 )}
               </ContentView>
