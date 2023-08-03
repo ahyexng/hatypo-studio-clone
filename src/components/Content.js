@@ -9,7 +9,7 @@ import More from "../assets/icons/more.png";
 import Call from "../assets/icons/call.png";
 import Send from "../assets/icons/send.png";
 import dummy from "../assets/data/msgListData.json";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 const Content = () => {
   const monthNames = [
@@ -26,11 +26,16 @@ const Content = () => {
     "Nov",
     "Dec",
   ];
+  const [content, setContent] = useState("");
   const date = new Date();
   const scrollRef = useRef();
   useEffect(() => {
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   });
+  const contentChange = (e) => {
+    setContent(e.target.value);
+    console.log(content);
+  };
   return (
     <>
       <ContentWrap>
@@ -109,7 +114,12 @@ const Content = () => {
         </ContentBox>
         <ContentForm>
           <FormWrap>
-            <ContentInput placeholder="Type a message"></ContentInput>
+            <ContentInput
+              name="content"
+              value={content}
+              placeholder="Type a message"
+              onChange={contentChange}
+            ></ContentInput>
             <InputIcon src={Face} style={{ marginRight: "5px" }} />
             <InputIcon src={Call} />
             <InputIcon src={More} />
