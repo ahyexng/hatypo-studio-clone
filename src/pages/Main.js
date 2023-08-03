@@ -20,6 +20,6 @@ const MainWrap = styled.div`
   width: 1470px;
   height: 900px;
   display: flex;
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
 `;
 export default Main;

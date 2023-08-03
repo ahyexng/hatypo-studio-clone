@@ -1,5 +1,5 @@
 {
-    "PinnedMsg": [
+    "Msg": [
       {
         "id": "1",
         "profile": "../images/olaf.png",
@@ -31,56 +31,60 @@
         "content": "It's a secret from Tom!",
         "isPinned": true,
         "time": "09:11 PM"
+      },
+      {
+        "id": "1",
+        "profile": "../images/Spongebob.png",
+        "name": "Spongebob",
+        "content": "Nahahahahahaha",
+        "isPinned": false,
+        "time": "09:26 PM"
+      },
+      {
+        "id": "2",
+        "profile": "../images/tom.png",
+        "name": "Tom",
+        "content": "Where's Jerry?",
+        "isPinned": false,
+        "time": "09:25 PM"
+      },
+      {
+        "id": "3",
+        "profile": "../images/anpanman.png",
+        "name": "Anpanman",
+        "content": "My face is so wet that I can't get energy 호빵맨 귀여웡 ㅎㅎ",
+        "isPinned": false,       
+         "time": "09:21 PM"
+      },
+      {
+        "id": "4",
+        "profile":  "../images/kirby.png",
+        "name": "Kirby",
+        "content": "I'm going to eat it all!",
+        "isPinned": false,
+        "time": "Yesterday"
+      },
+      {
+        "id": "5",
+        "profile":  "../images/panda.png",
+        "name": "Panda",
+        "content": "Fubao is cute",
+        "isPinned": false,
+        "time": "Yesterday"
       }
     ],
-    "AllMsg": [
-        {
-          "id": "1",
-          "profile": "../images/Spongebob.png",
-          "name": "Spongebob",
-          "content": "Nahahahahahaha",
-          "isPinned": false,
-          "time": "09:26 PM"
-        },
-        {
-          "id": "2",
-          "profile": "../images/tom.png",
-          "name": "Tom",
-          "content": "Where's Jerry?",
-          "isPinned": false,
-          "time": "09:25 PM"
-        },
-        {
-          "id": "3",
-          "profile": "../images/anpanman.png",
-          "name": "Anpanman",
-          "content": "My face is so wet that I can't get energy...",
-          "isPinned": false,       
-           "time": "09:21 PM"
-        },
-        {
-          "id": "4",
-          "profile":  "../images/kirby.png",
-          "name": "Kirby",
-          "content": "I'm going to eat it all!",
-          "isPinned": false,
-          "time": "Yesterday"
-        },
-        {
-          "id": "5",
-          "profile":  "../images/panda.png",
-          "name": "Panda",
-          "content": "Fubao is cute",
-          "isPinned": false,
-          "time": "Yesterday"
-        }
-      ],
       "Content": [
         {
           "id": "1",
           "profile": "../images/kuromi.png",
           "name": "Kuromi",
-          "content": ["안뇽 나는 쿠로밍",{"Link": "@You"}],
+          "content": {
+            "image": "../images/kuromi.png",
+            "text": "안뇽 나는 쿠로밍",
+            "Link": "@You",
+            "hasLink": true,
+            "hasImage": true
+          },
           "time": "05:00 PM",
           "isMine": false
         },
@@ -88,7 +92,13 @@
           "id": "2",
           "profile": "../images/kuromi.png",
           "name": "You",
-          "content": ["귀여웡"],
+          "content": {
+            "image": null,
+            "text": "귀여웡",
+            "Link": null,
+            "hasLink": false,
+            "hasImage": false
+          },
           "time": "05:02 PM",
           "isMine": true
         },
@@ -96,7 +106,13 @@
           "id": "3",
           "profile": "../images/tom.png",
           "name": "Tom",
-          "content": [{"img": "../images/tom.png"},"내 프사 오때?"],
+          "content": {
+            "image": "../images/tom.png",
+            "text": "내 프사 오때?",
+            "Link": null,
+            "hasLink": false,
+            "hasImage": true
+          },
           "time": "09:20 AM",
           "isMine": false
         },
@@ -104,7 +120,13 @@
           "id": "4",
           "profile": "../images/kirby.png",
           "name": "Kirby",
-          "content": ["별로"],
+          "content": {
+            "image": null,
+            "text": "별로",
+            "Link": null,
+            "hasLink": false,
+            "hasImage": false
+          },
           "time": "09:21 AM",
           "isMine": false
         },
@@ -112,8 +134,13 @@
           "id": "5",
           "profile": "../images/panda.png",
           "name": "Panda",
-          "content": ["얘들아 이것봐 아이바오가 쌍둥이 낳았대",{"Link": "https://www.instagram.com/p/Cq2AzG..."} ],
-      
+          "content": {
+            "image": null,
+            "text": "얘들아 이것봐 아이바오가 쌍둥이 낳았대",
+            "Link": "https://www.instagram.com/p/Cq2AzG...",
+            "hasLink": true,
+            "hasImage": false
+          },
           "time": "05:00 PM",
           "isMine": false
         }

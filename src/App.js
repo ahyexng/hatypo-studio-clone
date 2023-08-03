@@ -1,17 +1,20 @@
 import "./App.css";
 import GlobalStyle from "./styles/GlobalStyle";
-import Sidebar from "./components/Sidebar";
+import { ThemeProvider } from "styled-components";
+import { Theme } from "./styles/Theme";
 import Main from "./pages/Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <GlobalStyle />
-      <BrowserRouter>
-        <Routes>
-          <Route path={"/"} element={<Main />} />
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider theme={Theme}>
+        <GlobalStyle />
+        <BrowserRouter>
+          <Routes>
+            <Route path={"/"} element={<Main />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </div>
   );
 }

@@ -9,6 +9,8 @@ import More from "../assets/icons/more.png";
 import Call from "../assets/icons/call.png";
 import Send from "../assets/icons/send.png";
 import dummy from "../assets/data/msgListData.json";
+import { useRef, useEffect } from "react";
+
 const Content = () => {
   const monthNames = [
     "Jan",
@@ -25,6 +27,10 @@ const Content = () => {
     "Dec",
   ];
   const date = new Date();
+  const scrollRef = useRef();
+  useEffect(() => {
+    scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  });
   return (
     <>
       <ContentWrap>
@@ -49,7 +55,7 @@ const Content = () => {
             <HeaderLastImg src={More} />
           </HeaderIconWrap>
         </ContentHeader>
-        <ContentBox>
+        <ContentBox ref={scrollRef}>
           <DateView>
             <p>{`Today, ${monthNames[date.getMonth()]} ${date.getDay()}`}</p>
           </DateView>
@@ -63,14 +69,9 @@ const Content = () => {
                       <MyName>You</MyName>
                       <MyMsgTime>{item.time}</MyMsgTime>
                     </MsgHeader>
-                    {item.content &&
-                      item.content.map((data, index) => {
-                        return (
-                          <MyMsgBox>
-                            <MyMsgBoxP>{data}</MyMsgBoxP>
-                          </MyMsgBox>
-                        );
-                      })}
+                    <MyMsgBox>
+                      <MyMsgBoxP>{item.content.text}</MyMsgBoxP>
+                    </MyMsgBox>
                   </MyMsg>
                 ) : (
                   <GroupMsg>
@@ -79,22 +80,27 @@ const Content = () => {
                       <MsgName>{item.name}</MsgName>
                       <MsgTime>{item.time}</MsgTime>
                     </MsgHeader>
-                    {item.content &&
-                      item.content.map((data, index) => {
-                        return (
-                          <MsgBox>
-                            <MsgBoxP>
-                              {data.Link ? (
-                                <a href="/">{data.Link}</a>
-                              ) : data.img ? (
-                                <img src={data.img} />
-                              ) : (
-                                data
-                              )}
-                            </MsgBoxP>
-                          </MsgBox>
-                        );
-                      })}
+                    <MsgBox>
+                      <GroupView>
+                        {item.content.hasLink && (
+                          <MsgBoxP>
+                            <ContentLink href="/">
+                              {item.content.Link}
+                            </ContentLink>
+                          </MsgBoxP>
+                        )}
+                      </GroupView>
+                      <GroupView>
+                        {item.content.hasImage && (
+                          <MsgBoxP>
+                            <ContentImg src={item.content.image} />
+                          </MsgBoxP>
+                        )}
+                      </GroupView>
+                      <GroupView>
+                        <MsgBoxP>{item.content.text}</MsgBoxP>
+                      </GroupView>
+                    </MsgBox>
                   </GroupMsg>
                 )}
               </ContentView>
@@ -120,7 +126,7 @@ const Content = () => {
 const ContentWrap = styled.div`
   background-color: white;
   width: 600px;
-  height: 780px;
+  height: ${({ theme }) => theme.height};
   margin-top: 20px;
   border-radius: 10px;
   padding: 20px;
@@ -134,7 +140,7 @@ const ContentHeader = styled.div`
 const HeaderProfile = styled.img`
   height: 40px;
   width: 40px;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border-radius: 25px;
   padding: 5px;
   margin-right: 20px;
@@ -146,7 +152,7 @@ const HeaderMsg = styled.div`
   }
   p {
     text-align: left;
-    color: green;
+    color: ${({ theme }) => theme.colors.GREEN};
     font-size: 14px;
   }
 `;
@@ -157,7 +163,7 @@ const HeaderImgWrap = styled.div`
 `;
 const HeaderImg = styled.img`
   position: absolute;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border: 1px solid white;
   border-radius: 25px;
   top: -16px;
@@ -178,7 +184,7 @@ const HeaderLastImg = styled.img`
   opacity: 0.5;
 `;
 const ContentBox = styled.div`
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
   height: 600px;
   border-radius: 10px;
   overflow: scroll;
@@ -201,7 +207,6 @@ const DateView = styled.div`
 const ContentView = styled.div`
   display: flex;
   width: 480px;
-
   flex-direction: column;
 `;
 const GroupMsg = styled.div`
@@ -214,7 +219,7 @@ const MsgProfile = styled.img`
   height: 40px;
   width: 40px;
   float: left;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border-radius: 25px;
   padding: 3px;
 `;
@@ -232,7 +237,11 @@ const MsgTime = styled.p`
   margin-left: 100px;
 `;
 const MsgBox = styled.div`
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+`;
+const GroupView = styled.div`
+  display: flex;
 `;
 const MsgBoxP = styled.p`
   margin-left: 40px;
@@ -246,14 +255,6 @@ const MsgBoxP = styled.p`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  img {
-    height: 40px;
-    width: 50px;
-  }
-  a {
-    color: blue;
-    text-decoration: underline;
-  }
 `;
 const MsgHeader = styled.div`
   margin-right: 10px;
@@ -284,7 +285,7 @@ const MyProfile = styled.img`
   padding: 3px;
   float: right;
   margin: 10px 2px 5px 0;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
 `;
 const MyMsgBox = styled.div`
   margin: 0 44px 10px auto;
@@ -294,7 +295,7 @@ const MyMsgBoxP = styled.p`
   padding: 13px 10px 10px 10px;
   font-size: 15px;
   font-weight: 600;
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -310,14 +311,14 @@ const ContentInput = styled.input`
   border: none;
   height: 50px;
   width: 500px;
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
   &::placeholder {
     color: #bdbdbd;
   }
 `;
 const FormWrap = styled.div`
   border-radius: 10px;
-  background-color: #f8f7fd;
+  background-color: ${({ theme }) => theme.colors.GRAY};
   display: flex;
   align-items: center;
   height: 60px;
@@ -331,7 +332,7 @@ const InputIcon = styled.img`
   opacity: 0.5;
 `;
 const ContentBtn = styled.button`
-  background-color: pink;
+  background-color: ${({ theme }) => theme.colors.PINK};
   height: 60px;
   width: 60px;
   margin-left: 10px;
@@ -342,5 +343,15 @@ const ContentBtn = styled.button`
     width: 30px;
   }
 `;
-
+const ContentLink = styled.a`
+  display: flex;
+  color: blue;
+  text-decoration: underline;
+`;
+const ContentImg = styled.img`
+  display: flex;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+`;
 export default Content;
