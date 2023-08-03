@@ -69,14 +69,6 @@ const Content = () => {
                       <MyName>You</MyName>
                       <MyMsgTime>{item.time}</MyMsgTime>
                     </MsgHeader>
-                    {/* {item.content &&
-                      item.content.map((data, index) => {
-                        return (
-                          <MyMsgBox>
-                            <MyMsgBoxP>{data.}</MyMsgBoxP>
-                          </MyMsgBox>
-                        );
-                      })} */}
                     <MyMsgBox>
                       <MyMsgBoxP>{item.content.text}</MyMsgBoxP>
                     </MyMsgBox>
@@ -89,44 +81,26 @@ const Content = () => {
                       <MsgTime>{item.time}</MsgTime>
                     </MsgHeader>
                     <MsgBox>
-                      <MsgBoxP>
-                        {/* {item.content.hasLink ? (
-                                <a href="/">{item.content.Link}</a>
-                              ) : item.content.img ? (
-                                <img src={item.content.img} />
-                              ) : (
-                                data
-                              )} */}
+                      <GroupView>
                         {item.content.hasLink && (
-                          <a href="/">{item.content.Link}</a>
+                          <MsgBoxP>
+                            <ContentLink href="/">
+                              {item.content.Link}
+                            </ContentLink>
+                          </MsgBoxP>
                         )}
-                        <br />
+                      </GroupView>
+                      <GroupView>
                         {item.content.hasImage && (
-                          <img src={item.content.image} />
+                          <MsgBoxP>
+                            <ContentImg src={item.content.image} />
+                          </MsgBoxP>
                         )}
-                        {item.content.text}
-                        <br />
-                      </MsgBoxP>
+                      </GroupView>
+                      <GroupView>
+                        <MsgBoxP>{item.content.text}</MsgBoxP>
+                      </GroupView>
                     </MsgBox>
-                    {/* {item.content &&
-                      item.content.map((data, index) => {
-                        return (
-                          <MsgBox>
-                            <MsgBoxP>
-                              {data.hasLink ? (
-                                <a href="/">{data.Link}</a>
-                              ) : data.img ? (
-                                <img src={data.img} />
-                              ) : (
-                                data
-                              )}
-                              {data.hasLink && <a href="/">{data.Link}</a>}
-                              {data.hasImage && <img src={data.img} />}
-                              {data.text}
-                            </MsgBoxP>
-                          </MsgBox>
-                        );
-                      })} */}
                   </GroupMsg>
                 )}
               </ContentView>
@@ -263,7 +237,11 @@ const MsgTime = styled.p`
   margin-left: 100px;
 `;
 const MsgBox = styled.div`
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+`;
+const GroupView = styled.div`
+  display: flex;
 `;
 const MsgBoxP = styled.p`
   margin-left: 40px;
@@ -277,14 +255,6 @@ const MsgBoxP = styled.p`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  img {
-    height: 40px;
-    width: 50px;
-  }
-  a {
-    color: blue;
-    text-decoration: underline;
-  }
 `;
 const MsgHeader = styled.div`
   margin-right: 10px;
@@ -373,5 +343,15 @@ const ContentBtn = styled.button`
     width: 30px;
   }
 `;
-
+const ContentLink = styled.a`
+  display: flex;
+  color: blue;
+  text-decoration: underline;
+`;
+const ContentImg = styled.img`
+  display: flex;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+`;
 export default Content;
