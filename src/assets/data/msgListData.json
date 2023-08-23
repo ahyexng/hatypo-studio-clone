@@ -76,12 +76,12 @@
       "Content": [
         {
           "id": "1",
-          "profile": "../images/kuromi.png",
-          "name": "Kuromi",
+          "profile": "../images/pikachu.png",
+          "name": "Pikachu",
           "content": {
-            "image": "../images/kuromi.png",
-            "text": "안뇽 나는 쿠로밍",
-            "Link": "@You",
+            "image": "../images/pikachu.png",
+            "text": "pika pika",
+            "Link": "@you",
             "hasLink": true,
             "hasImage": true
           },
