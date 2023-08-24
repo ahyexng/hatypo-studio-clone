@@ -80,7 +80,7 @@
           "name": "Pikachu",
           "content": {
             "image": "../images/pikachu.png",
-            "text": "pika pika",
+            "text": "pika pika~!!!!",
             "Link": "@you",
             "hasLink": true,
             "hasImage": true
